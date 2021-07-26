@@ -1,0 +1,22 @@
+.input{
+    border-radius: 50px;
+    padding: 2%;
+    outline: none;
+    background-color: rgba(238, 238, 238, 0.932);
+    border: 0;
+    margin: 10px 0px 0px 0px;
+}
+.input:focus{
+    width: 120%;
+    background: white;
+    transition: 2.5s;
+}
+
+.filterContinent{
+    margin-left: 13px;
+    color: lightcyan;
+    font-family: cursive;
+    border-radius: 50px;
+    background-color: rgba(187, 50, 68, 0.795);
+    border: 0;
+}
