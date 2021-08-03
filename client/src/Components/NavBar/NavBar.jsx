@@ -8,7 +8,7 @@ const NavBar = () => {
         <div>
             <Link to='/'><img src='https://www.szkolneblogi.pl/static/media/users/private/SPmarzecice/eko5.gif' alt='' className={style.img}/></Link>
         </div>  
-            <h1> - APP COUNTRIES - </h1>
+            <h1> APP COUNTRIES - </h1>
             <h3>"Let's take care of our home 🏠 , called Earth 🌎."</h3> 
             <div>
             <NavLink className={style.buttonLink} to='/activities' >Create Activity</NavLink>

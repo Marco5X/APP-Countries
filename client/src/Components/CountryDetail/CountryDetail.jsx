@@ -18,9 +18,9 @@ const CountryDetail = ({ id }) => {
         <> {!state ? <div>Loading...</div> :
             Object.keys(country).length === 0 ? <div>Loading...</div> ://devuelve un array cuyos elementos son strings correspondientes a las propiedades enumerables que se encuentran directamente en el object
                 <div className={style.fontContainer}>
-                      <div >
-                    <Link className={style.buttonLink} to='/countries'> GO HOME </Link>
-                </div>
+                    <div >
+                        <Link className={style.buttonLink} to='/countries'> GO HOME </Link>
+                    </div>
                     <div className={style.detailContainer} >
                         <h1>{country.name} ({country.id})</h1>
                         <figure >
@@ -34,7 +34,7 @@ const CountryDetail = ({ id }) => {
                     </div>
                     <div className={style.detailContainer}>
                         <h1>Dreams of tourist activities</h1>
-                    <hr />
+                        <hr />
                         {country.activities.length === 0 ? <p>There are no tourist dreams in this country</p> :
                             <div> <ul>
                                 {

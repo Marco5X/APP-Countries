@@ -20,7 +20,7 @@
     padding: 20px;
     backdrop-filter: blur(4px);
     border: rgba(255, 255, 255, 0.63) 2px solid;
-    border-radius: 2%;
+    border-radius: 5% 0% 5% 0%;
 }
 
 .input{
@@ -59,7 +59,7 @@
     border: 0;
 }
 .multiSelect:focus{
-    height: 240px;
+    height: 220px;
     background-color: rgba(187, 50, 68, 0.651);
 }
 
@@ -76,7 +76,7 @@
 .buttonLink{
     display: flex;
     margin: auto ;
-    margin-bottom: 30%;
+    margin-bottom: 25%;
     text-decoration: none;
     color: lightcyan;
     background-color: rgba(43, 14, 19, 0.336);    

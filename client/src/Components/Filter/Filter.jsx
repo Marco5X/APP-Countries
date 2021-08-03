@@ -20,33 +20,33 @@ const Ordered = ({ getCountries, filterContinent, filterActivity }) => {
         e.preventDefault()
         setActivity(e.target.value)
     }
-    
+
     const setInputHandler = (e) => {
         e.preventDefault()
-        if(activity) {
+        if (activity) {
             filterActivity(activity)
         } else if (!activity) {
-            alert('❌ Enter a name of a activity')            
-        }    
+            alert('❌ Enter a name of a activity')
+        }
         setActivity('')
     }
 
     return (
         <div className={1}>
-                {/* <label>Activity</label> */}
-                <form onSubmit={setInputHandler}>
-                    <input className={style.input} placeholder='Search for tourist activity...' type='text' value={activity} onChange={inputActivityHandler} />
-                    {/* <button type='submit' > 🔎 </button> */}
-                </form>
-                <h5> Filter by Continent</h5>
-                 <select className={style.filterContinent} onChange={(e) => setRegion(e.target.value)}>
-                        <option value='all'>🌐 All Countries</option>
-                        <option value='Americas'>Americas</option>
-                        <option value='Europe'>Europe</option>
-                        <option value='Africa'>Africa</option>
-                        <option value='Oceania'>Oceania</option>
-                        <option value='Asia'>Asia</option>
-                </select>
+            {/* <label>Activity</label> */}
+            <form onSubmit={setInputHandler}>
+                <input className={style.input} placeholder='Search for tourist activity...' type='text' value={activity} onChange={inputActivityHandler} />
+                {/* <button type='submit' > 🔎 </button> */}
+            </form>
+            <h5> Filter by Continent</h5>
+            <select className={style.filterContinent} onChange={(e) => setRegion(e.target.value)}>
+                <option value='all'>🌐 All Countries</option>
+                <option value='Americas'>Americas</option>
+                <option value='Europe'>Europe</option>
+                <option value='Africa'>Africa</option>
+                <option value='Oceania'>Oceania</option>
+                <option value='Asia'>Asia</option>
+            </select>
         </div>
     )
 }

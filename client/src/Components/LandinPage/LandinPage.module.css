@@ -44,8 +44,8 @@
 
 .button {
     display: flex;
-    margin: 2% 47%;
     text-decoration: none;
+    margin: 2% 47%;
     color: lightcyan;
     background-color: #177ee6;
     padding: 10px;

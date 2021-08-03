@@ -16,7 +16,7 @@ const Ordered = ({ getCountries, sortAToZ, sortZToA, sortPopulationAsc, sortPopu
 
     return (
         <div>
-                <h5>Order by</h5>
+            <h5>Order by</h5>
                 <select className={style.selectOrder} onChange={(e) => setOrder(e.target.value)}>
                     <option value='all'>🌐 All Countries</option>
                     <option value='a-z'>A...z</option>
@@ -44,77 +44,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Ordered);
-
-// import React from 'react';
-// import  { useState, useEffect } from 'react'
-// import { getCountries }from '../../Actions/index';
-// import {useDispatch, useSelector} from 'react-redux'
-
-
-// function Ordered (){
-//     const [countries, setCountries] = useState([]);
-//     const dispatch = useDispatch();
-//     const allCountries = useSelector(state => state.countries)
-
-// function alphabeticallyAsc (){       
-//     const state1 = allCountries
-//     state1.sort((a, b) => {
-//         if(a.name < b.name) return -1;
-//         if(a.name > b.name) return 1;
-//         return 0
-//     })
-//     setCountries([...state1])
-// }
-
-// function alphabeticallyDesc (){  
-//     const state2 = allCountries
-//     state2.sort((a, b) => {
-//         if(a.name < b.name) return 1;
-//         if(a.name > b.name) return -1;
-//         return 0
-//     })
-//     setCountries([...state2])
-// }
-
-// function pupulationAsc () {
-//     const state3 = allCountries
-//     state3.sort((a, b) => {
-//         if(a.population < b.population) return 1;
-//         if(a.population > b.population) return -1;
-//         return 0
-//     })
-//     setCountries([...state3])
-// }
-// function populationDesc () {      
-//     const state4 = allCountries
-//     state4.sort((a, b) => {
-//         if(a.population < b.population) return -1;
-//         if(a.population > b.population) return 1;
-//         return 0
-//     })
-//     setCountries([...state4])
-// }
-
-//     useEffect(()=>{
-//         dispatch(getCountries())
-//       }, [dispatch])
-
-//      useEffect(()=>{
-//          setCountries(allCountries)
-//       }, [allCountries])
-
-//         return (    
-//             <div>   
-//                 <div>        
-//                     <button onClick={alphabeticallyAsc} >A...z</button>
-//                     <button onClick={alphabeticallyDesc} >Z...a</button>
-//                     <button onClick={pupulationAsc} >👆🏼 Population </button>
-//                     <button onClick={populationDesc} >👇🏼 Population </button>  
-//                 </div>
-
-//             </div>
-//         )
-// }
-
-// export default Ordered ;
 

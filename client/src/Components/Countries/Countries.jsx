@@ -32,11 +32,11 @@ function Countries(props) {
 		</div>
 			<div className={style.buttonPagination}>
 				<div className={style.button}>
-					<button onClick={() => setnumberPage(numberPage - 1)}> 👈🏼 </button>
+					<button onClick={() => setnumberPage(numberPage - 1)}> ◀ </button>
 				</div>
 				<div className={style.numberPage}>{numberPage} de 25</div>
 				<div className={style.button}>
-					<button onClick={() => setnumberPage(numberPage + 1)}> 👉🏼 </button>
+					<button onClick={() => setnumberPage(numberPage + 1)}> ▶ </button>
 				</div>
 			</div>
 		</>

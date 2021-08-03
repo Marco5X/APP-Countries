@@ -6,7 +6,7 @@ creación de actividad turística por body
 Crea una actividad turística en la base de datos
 */
 server.post('/', async (req, res) => {
-    const { name, difficulty, duration, season, countryId }=req.body
+    const { name, difficulty, duration, season, countryId } = req.body
     console.log(req.body)
     try {
         const actTour = await Activity.create({
