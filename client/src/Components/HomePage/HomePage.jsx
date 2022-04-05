@@ -6,14 +6,14 @@ import SearchBar from '../SearchBar/SearchBar'
 import Filter from '../Filter/Filter';
 
 const HomePage = () => {
-  return (
-    <div className={style.homeContainer}>
-      <SearchBar />
-      <Filter />
-      <Ordered />    
-      <Countries />
-    </div>
-  )
+    return (
+        <div className={style.homeContainer}>
+            <SearchBar />
+            <Filter />
+            <Ordered />    
+            <Countries />
+        </div>
+    )
 }
 
 export default HomePage;

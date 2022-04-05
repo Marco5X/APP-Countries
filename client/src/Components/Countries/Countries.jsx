@@ -24,8 +24,9 @@ function Countries(props) {
 			{countries ? countries.map(c =>
 				<div>
 					<Country
+					    key={c.id}
 						name={c.name}
-						flag={c.flag}
+						flag={!c.flag? "Cargando" : c.flag}
 						region={c.region}
 						id={c.id} />
 				</div>) : (<h2>'The country does not exist 😱'</h2>)}

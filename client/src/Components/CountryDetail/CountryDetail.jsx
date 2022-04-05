@@ -22,7 +22,7 @@ const CountryDetail = ({ id }) => {
                         <Link className={style.buttonLink} to='/countries'> GO HOME </Link>
                     </div>
                     <div className={style.detailContainer} >
-                        <h1>{country.name} ({country.id})</h1>
+                        <h1 key={country.id}>{country.name} ({country.id})</h1>
                         <figure >
                             <img src={country.flag} alt='img not found 😔' />
                         </figure>
@@ -36,20 +36,18 @@ const CountryDetail = ({ id }) => {
                         <h1>Dreams of tourist activities</h1>
                         <hr />
                         {country.activities.length === 0 ? <p>There are no tourist dreams in this country</p> :
-                            <div> <ul>
-                                {
-                                    country.activities.map((actTour) => (
-                                        <li key={actTour.name}>
-                                            {actTour.name}
-                                        </li>
-                                    ))
-                                }
+                        <div> <ul>
+                                {country.activities.map((actTour) => (
+                                    <li key={actTour.name}>
+                                        {actTour.name}
+                                    </li>
+                                ))}
                             </ul>
-                            </div>
+                        </div>
                         }
                     </div>
                 </div>
-        }
+            }
         </>
     )
 }

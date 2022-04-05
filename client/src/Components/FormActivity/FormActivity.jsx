@@ -50,6 +50,11 @@ const FormActivity = () => {
         setSubmit(true)
         dispatch(postAct(activities))
         alert('✅ Activity Created')
+        setActivities({name: '',
+        difficulty: '',
+        duration: '',
+        season: '',
+        countryId: [] })
     }
 
     return (
@@ -97,7 +102,6 @@ const FormActivity = () => {
                     <input className={style.button} type='submit' />
                 </div>{console.log(activities)}
             </form>
-
             </div>
         </div>
     )

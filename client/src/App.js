@@ -1,5 +1,5 @@
 import './App.css';
-import { Route } from 'react-router'//
+import { Route } from 'react-router-dom'//
 import LandingPage from './Components/LandinPage/LandinPage'
 import NavBar from './Components/NavBar/NavBar'
 import Footer from './Components/Footer/Footer'
