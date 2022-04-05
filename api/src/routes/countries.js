@@ -2,7 +2,8 @@ const server = require('express').Router();
 const axios = require('axios').default;
 const { Country, Activity } = require('../db.js');
 const { Op } = require('sequelize');
-const BASE_URL = require('../constants')
+const BASE_URL = require('../constants');
+const common = require('mocha/lib/interfaces/common');
 
 /*     GET /countries:
 En una primera instancia deberán traer todos los países desde restcountries y guardarlos en su propia base de datos y luego ya utilizarlos desde allí (Debe almacenar solo los datos necesarios para la ruta principal)
@@ -15,15 +16,15 @@ server.get('/', async (req, res, next) => {
         if (!name) {
             Country.findAll({include:Activity}).then(resp => {
                     if (!resp.length) {
-                        axios.get('https://restcountries.eu/rest/v2/all').then((response) => {
+                        axios.get('https://restcountries.com/v3/all').then((response) => {
                                 response.data.map(async (country) => {
                                     arrBD.push(
                                        await Country.create({
-                                            id: country.alpha3Code,
-                                            name: country.name,
-                                            flag: country.flag,
+                                            id: country.cca3,
+                                            name: country.translations.spa.common,
+                                            flag: country.flags[0]? country.flags[1] : "🎏",
                                             region: country.region,
-                                            capital: country.capital,
+                                            capital: country.capital? country.capital[0] : 'no cap',
                                             subregion: country.subregion,
                                             area: country.area,
                                             population: country.population
